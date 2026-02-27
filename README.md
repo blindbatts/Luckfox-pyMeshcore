@@ -28,7 +28,8 @@ echo 1 > /sys/class/gpio/gpio55/value
 
 #### 2. Install network-manager
 
-Standard scripts can be flaky. We recommend **NetworkManager** for its better handling of link drops.
+The standard wifi scripts Luckfox has on their wiki are flaky and wouldn't pursist thru a reboot for me. 
+I recommend **NetworkManager** for its better handling of link drops.
 
 ```bash
 sudo apt update
@@ -39,7 +40,8 @@ sudo systemctl enable --now NetworkManager
 
 #### 3. Create the Persistent Startup Script
 
-Since the Wi-Fi hardware needs a "kick" after the kernel boots, create a startup script: `sudo nano /usr/local/bin/wifi-startup.sh`
+Since the Wi-Fi hardware needs a "kick" after the kernel boots, create a startup script: 
+`sudo nano /usr/local/bin/wifi-startup.sh`
 
 ```bash
 #!/bin/bash
@@ -62,7 +64,8 @@ nmcli dev wifi connect "YOUR_SSID" password "YOUR_PASSWORD"
 
 #### 4. Automate with Systemd
 
-Create a service to run this on every boot: `sudo nano /etc/systemd/system/luckfox-wifi.service`
+Create a service to run this on every boot: 
+`sudo nano /etc/systemd/system/luckfox-wifi.service`
 
 ```ini
 [Unit]
