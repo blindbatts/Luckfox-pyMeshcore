@@ -1,0 +1,91 @@
+ch341:
+  pid: 21778
+  vid: 6790
+delays:
+  direct_tx_delay_factor: 0.5
+  tx_delay_factor: 0.5
+duty_cycle:
+  enforcement_enabled: false
+  max_airtime_per_minute: 3600
+identities:
+  room_servers: null
+letsmesh:
+  broker_index: 0
+  disallowed_packet_types: []
+  email: ''
+  enabled: false
+  iata_code: Test
+  owner: ''
+  status_interval: 300
+logging:
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: DEBUG
+mesh:
+  global_flood_allow: true
+  identity_key: !!binary |
+    CHANGEME
+mqtt:
+  base_topic: meshcore/repeater
+  broker: localhost
+  enabled: false
+  password: null
+  port: 1883
+  tls:
+    ca_cert: null
+    client_cert: null
+    client_key: null
+    enabled: false
+    insecure: false
+  use_websockets: false
+  username: null
+radio:
+  bandwidth: 62500
+  coding_rate: 5
+  crc_enabled: true
+  frequency: 927875000
+  implicit_header: false
+  preamble_length: 16
+  spreading_factor: 7
+  sync_word: 13380
+  tx_power: 14
+radio_type: sx1262
+repeater:
+  allow_discovery: true
+  cache_ttl: 3600
+  identity_file: null
+  latitude: 34.21443721023227
+  longitude: -119.02394771575929
+  node_name: pymcrptr-CHANGEME
+  score_threshold: 0.3
+  security:
+    admin_password: CHANGEME
+    allow_read_only: false
+    guest_password: CREATEONE
+    jwt_expiry_minutes: 60
+    jwt_secret: CHANGEME
+    max_clients: 1
+  send_advert_interval_hours: 48
+  use_score_for_tx: false
+  mode: monitor
+storage:
+  retention:
+    sqlite_cleanup_days: 31
+  storage_dir: /var/lib/pymc_repeater
+sx1262:
+  bus_id: 0
+  busy_pin: 11
+  cs_id: 0
+  cs_pin: 10
+  dio3_tcxo_voltage: 1.8
+  irq_pin: 5
+  is_waveshare: false
+  reset_pin: 9
+  rxen_pin: 14
+  rxled_pin: 1
+  txen_pin: -1
+  txled_pin: 1
+  use_dio2_rf: true
+  use_dio3_tcxo: true
+web:
+  cors_enabled: true
+  web_path: null
