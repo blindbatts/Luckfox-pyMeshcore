@@ -7,11 +7,6 @@ Guide for setting up a Luckfox Lyra Ultra W with an e22p wehooper4 v2 Lora hat t
 
 After the initial flash of Ubuntu 22.04, the "out-of-the-box" experience for the Lyra has three major friction points we need to solve:
 
-1. **Hardware Enable:** The Wi-Fi chip is connected via SDIO and is physically disabled by default. It requires manual power-up via a specific GPIO pin before the OS even sees it as a device.
-2. **Driver State Machine:** The `aic8800_fdrv` driver can be finicky. It often needs a software "kick" (toggling the radio off/on) to properly initialize after the module is loaded.
-3. **DHCP vs. Connection Handshake:** Standard tools like `udhcpc` often loop infinitely if the physical handshake isn't perfectly timed with the driver initialization.
-4. **Persistence:** Ubuntu's standard `netplan` or `interfaces` config often fails on this board because the hardware isn't "ready" when the networking service starts.
-
 ---
 
 ## 🚀 Luckfox Lyra Wi-Fi & LoRa Setup
@@ -131,7 +126,7 @@ python3 --version
 
 #### 3. Why we run as Root
 
-On the Lyra, GPIO and SPI permissions are not persistent for non-root users out of the box. To avoid "Permission Denied" errors when `pymc-repeater` tries to access the LoRa HAT, we install the package and run the service as root.
+On the Lyra, GPIO and SPI permissions are not usable for non-root users. To avoid "Permission Denied" errors when `pymc-repeater` tries to access the LoRa HAT, we install the package and run the service as root.
 
 ```bash
 # Install pymc-repeater dependencies as root
