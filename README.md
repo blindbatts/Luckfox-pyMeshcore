@@ -87,13 +87,14 @@ WantedBy=multi-user.target
 
 #### 5. LoRa HAT Verification
 
-If using a LoRa HAT (e.g., SX1262), verify the SPI/UART communication via `dmesg`.
+If using a LoRa HAT (e.g., SX1262), verify the SPI/UART communication.
 
 ```bash
-dmesg | grep spi
+ls /dev/spidev*
 # You should see the SPI bus initialized for the RK3506
 
 ```
+/dev/spidev0.0
 
 ### 🐍 Phase 2: Python 3.11 & Root Environment Setup
 
