@@ -1,6 +1,6 @@
 # Luckfox Lyra Ultra W running pymc-Repeater
 
-Guide for setting up a Luckfox Lyra Ultra W with an e22p wehooper4 v2 Lora hat to run pymc-repeater
+Guide for setting up a Luckfox Lyra Ultra W with an e22p based wehooper4 v3 Lora hat to run pymc-repeater
 
 
 ## 📝 Summary of Post-Flash Fixes
