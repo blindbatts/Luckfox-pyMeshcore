@@ -201,8 +201,8 @@ If you still see "Export failed" in the logs:
 
 #### Hardware
 
-* **[Luckfox Lyra Pi](https://wiki.luckfox.com/Luckfox-Lyra/Introduction/)** - An RK3506 quad-core IoT development board. Features dual Ethernet (one with PoE) and a Pi-compatible 40-pin header.
-* **[Waveshare SX1262 LoRa HAT](https://www.google.com/search?q=https://www.waveshare.com/sx1262-915m-lora-hat.htm)** - A high-performance LoRa expansion board using UART/SPI, commonly used for Meshtastic and custom mesh nodes.
+* **[Luckfox Lyra Pi](https://wiki.luckfox.com/Luckfox-Lyra/Introduction/)** - An RK3506 quad-core IoT development board. Features Ethernet (optional with PoE hat!) and a Pi-compatible 40-pin header.
+* **[WeHooper4 Luckfox Lyra LoRa HAT](https://github.com/wehooper4/Meshtastic-Hardware/tree/main/Luckfox%20Ultra%20Hat)** - A high-performance LoRa expansion board using UART/SPI, commonly used for Meshtastic and custom mesh nodes.
 
 #### Core Software & Drivers
 
