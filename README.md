@@ -195,8 +195,6 @@ If you still see "Export failed" in the logs:
 1. Ensure no other process (like the default Luckfox LED blinker) is using the pins.
 2. Check `cat /sys/kernel/debug/gpio` to see which pins are currently claimed by the kernel.
 
-Here is the updated **References** block to include at the end of your `README.md`. This captures the specific hardware you're using (the new Luckfox Lyra "Pi" form factor and the Waveshare-style SX1262 HAT) along with the core software projects that made this possible.
-
 ---
 
 ### 📚 References & Resources
